@@ -1,5 +1,6 @@
 from get_page import *
 from parse_page import *
+from format_str import *
 
 if __name__ == '__main__':
     date = input('Введите дату: ')
@@ -8,7 +9,5 @@ if __name__ == '__main__':
     courses = parse_page(page)
     for course in courses:
         if course[1] == cur:
-            print(course)
-            break
-    
-        
+            print(format_str(course))
+            break       
