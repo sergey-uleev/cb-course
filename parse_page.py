@@ -9,5 +9,6 @@ def parse_page(page):
             soup = BeautifulSoup(str(row), 'html.parser')
             data = soup.find('tr').findAll('td')
             data = [str(entry).replace('<td>', '').replace('</td>', '') for entry in data]
-            courses.append(data)
+            if data:
+                courses.append(data)
     return courses
